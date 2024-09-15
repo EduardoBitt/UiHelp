@@ -1,5 +1,23 @@
 /* Estilo para o formulário */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.bg{
+    background-image: url("bg-cadastro.png");
+
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 form {
     max-width: 700px;
     margin: 0 auto;
@@ -7,6 +25,11 @@ form {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Roboto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 h1{
@@ -54,4 +77,22 @@ html, body {
 #map {
     height: 100vh; /* 100% da altura da viewport */
     width: 100vw;  /* 100% da largura da viewport */
+}
+
+.sub-btn{
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    z-index: 1000;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sub-btn:hover{
+    background-color: #0056b3;
 }

@@ -7,15 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div class="bg"></div>
+
     <form id="cnpjForm">
-        <h1>Cadastre sua Instituição de Doação</h1>
+        <h1>Cadastre sua Instituição</h1>
         <label for="cnpjInput">CNPJ:</label>
         <input type="text" id="cnpjInput" placeholder="Digite o CNPJ" required>
         <p id="resposta"></p>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Nome" required>
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="text" id="sobrenome" placeholder="Sobrenome" required>
         <button type="submit">Enviar</button>
     </form>
-
-    <div id="result"></div>
 
     <script src="script.js"></script>
 </body>
