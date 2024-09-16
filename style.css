@@ -5,23 +5,22 @@
 .bg{
     background-image: url("bg-cadastro.png");
 
-  /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
 
   /* Full height */
-  height: 100%;
+    height: 100%;
 
   /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 form {
     max-width: 700px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -32,20 +31,24 @@ form {
     transform: translate(-50%, -50%);
 }
 
-h1{
+form h1 {
     text-align: center;
+    margin-top: 5px;
 }
 
 label {
     font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
 }
 
 input[type="text"] {
-    width: 80%;
+    width: 100%; /* Ajusta o tamanho do input para ocupar todo o espaço disponível */
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px; /* Espaço entre os campos */
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box; /* Garante que o padding não altere o tamanho do input */
 }
 
 button[type="submit"] {
@@ -62,9 +65,30 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-#resposta{
+#resposta {
     font-size: 15px;
 }
+
+
+.back-btn{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover{
+    background-color: #0056b3;
+}
+
+
 
 
 /*-------------------------- CSS relacionado ao mapa  --------------------------*/
