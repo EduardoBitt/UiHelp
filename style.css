@@ -113,7 +113,7 @@ html, body {
     left: 0;
     background-color: #111;
     overflow-x: hidden;
-    transition: width 0.5s ease;
+    transition: width 0.2s ease;
     padding-top: 60px;
 }
 
@@ -142,11 +142,6 @@ html, body {
     padding: 5px 5px 5px 5px;
     font-size: 20px;
     color: #ffffff;
-    display: block;
-}
-
-.menu a:hover {
-    color: #f1f1f1;
 }
 
 .menu .closebtn {
@@ -155,6 +150,22 @@ html, body {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+}
+
+.menu .sub-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 10%;
+}
+
+.menu .sub-btn:hover {
+    background-color: #0056b3;
 }
 
 /* Estilo do ícone de menu hambúrguer */
