@@ -96,6 +96,7 @@ button[type="submit"]:hover {
 html, body {
     height: 100%;
     margin: 0;
+    font-family: Roboto;
 }
 
 #map {
@@ -103,20 +104,69 @@ html, body {
     width: 100vw;  /* 100% da largura da viewport */
 }
 
-.sub-btn{
-    position: absolute;
-    top: 20px;
-    left: 100px;
+.menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
     z-index: 1000;
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: width 0.5s ease;
+    padding-top: 60px;
 }
 
-.sub-btn:hover{
-    background-color: #0056b3;
+/* O menu quando estiver aberto */
+.menu.open {
+    width: 250px;
+}
+
+.menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+}
+
+.menu label{
+    color: #ffffff;
+}
+
+.menu .options{
+    display: flex;
+}
+
+.menu p{
+    padding: 5px 5px 5px 5px;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+}
+
+.menu a:hover {
+    color: #f1f1f1;
+}
+
+.menu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Estilo do ícone de menu hambúrguer */
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+    color: #111;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
 }
