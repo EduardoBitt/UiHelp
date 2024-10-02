@@ -26,13 +26,44 @@
         <input type="email" id="email" required>
 
         <label for="imagem">Imagem da Instituição</label>
-        <input type="file">
+        <input type="file" id="imagem" required>
         
+        <label for="categoria">Categoria</label>
+        <select name="categoria" id="categoria" required>
+            <option value="roupas">Roupas</option>
+            <option value="moveis">Móveis</option>
+            <option value="brinquedos">Brinquedos</option>
+            <option value="alimentos">Alimentos</option>
+            <option value="residuos">Residuos</option>
+        </select>
+
+
+        <fieldset id="horarios">
+            <legend>Horários de Funcionamento</legend>
+            <div id="horariosContainer">
+                <div class="horario">
+                    <select class="dia-da-semana">
+                        <option value="segunda">Segunda</option>
+                        <option value="terca">Terça</option>
+                        <option value="quarta">Quarta</option>
+                        <option value="quinta">Quinta</option>
+                        <option value="sexta">Sexta</option>
+                        <option value="sabado">Sábado</option>
+                        <option value="domingo">Domingo</option>
+                    </select>
+                    <input type="time" class="horario-abertura" required>
+                    <input type="time" class="horario-fechamento" required>
+                    <button type="button" class="remove-horario">Remover</button>
+                </div>
+            </div>
+            <button type="button" id="addHorario">Adicionar Horário</button>
+        </fieldset>
+
+
         <p id="resposta"></p>
+
         <button type="submit">Enviar</button>
     </form>
-
-    <a href="index.html"><button class="back-btn">Voltar</button></a>
 
     <script src="script.js"></script>
 </body>

@@ -34,6 +34,7 @@ form {
 form h1 {
     text-align: center;
     margin-top: 5px;
+    margin-bottom: 20px;
 }
 
 label {
@@ -69,34 +70,103 @@ button[type="submit"]:hover {
     font-size: 15px;
 }
 
+#categoria{
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
 
-.back-btn{
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
+
+/* Estilo para a seção de horários */
+
+.horario-container {
+    display: flex;
+    flex-direction: column; /* Empilha os campos de horário */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    padding: 20px;
+    background-color: #f9f9f9; /* Fundo leve */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.horario {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+    margin-bottom: 15px; /* Espaçamento entre horários */
+}
+
+.horario select,
+.horario input[type="time"] {
+    flex: 1; /* Faz os campos ocuparem o espaço disponível */
+    padding: 10px; /* Espaçamento interno */
+    margin-right: 10px; /* Espaço entre os campos */
+    border: 1px solid #ccc; /* Borda padrão */
+    border-radius: 4px; /* Bordas arredondadas */
+    transition: border-color 0.3s; /* Transição suave */
+}
+
+.horario select:focus,
+.horario input[type="time"]:focus {
+    border-color: #007bff; /* Cor ao focar */
+    outline: none; /* Remove a borda padrão do foco */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Espaça os botões de adicionar e remover */
+}
+
+button#addHorario {
     background-color: #007bff;
     color: #ffffff;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
-.back-btn:hover{
+button#addHorario:hover {
     background-color: #0056b3;
 }
+
+button.remove-horario {
+    background-color: #ff4444;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.remove-horario:hover {
+    background-color: #c0392b; /* Cor ao passar o mouse */
+}
+
+#horarios{
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
 
 
 
 
 /*-------------------------- CSS relacionado ao mapa  --------------------------*/
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html, body {
     height: 100%;
     margin: 0;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
 }
 
 #map {
@@ -111,79 +181,45 @@ html, body {
     z-index: 1000;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #222;
+    color: white;
     overflow-x: hidden;
-    transition: width 0.2s ease;
+    transition: width 0.3s ease;
     padding-top: 60px;
 }
 
-/* O menu quando estiver aberto */
+/* Menu quando aberto */
 .menu.open {
-    width: 250px;
+    width: 300px;
 }
 
+/* Título do menu */
+.menu-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Links e labels do menu */
 .menu a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #ffffff;
-    display: block;
-}
-
-.menu label{
-    color: #ffffff;
-}
-
-.menu .options{
-    display: flex;
-}
-
-.menu p{
-    padding: 5px 5px 5px 5px;
-    font-size: 20px;
-    color: #ffffff;
-}
-
-.menu .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-.menu .sub-btn {
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
     padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    position: absolute;
-    bottom: 10%;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f1f1f1;
+    display: block;
+    transition: background 0.3s ease;
 }
 
-.menu .sub-btn:hover {
-    background-color: #0056b3;
+.menu label {
+    color: #f1f1f1;
+    font-size: 18px;
 }
 
-/* Estilo do ícone de menu hambúrguer */
-.hamburger {
-    font-size: 30px;
-    cursor: pointer;
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    z-index: 1001;
-    color: #111;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.filter-list {
+.menu .filter-list {
     list-style-type: none;
+    padding-left: 20px;
+    margin-bottom: 30px;
 }
 
 .filter-list li {
@@ -191,7 +227,6 @@ html, body {
 }
 
 .filter-list label {
-    font-size: 18px;
     display: flex;
     align-items: center;
 }
@@ -202,10 +237,91 @@ html, body {
     height: 20px;
 }
 
-/*-------------------------- POP-UP --------------------------*/
+/* Botão para fechar o menu */
+.menu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    padding: 10px;
+}
 
+/* Botão de inscrição */
+.sub-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 20px 40px;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.sub-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Seção de contato */
+.contato {
+    position: absolute;
+    bottom: 20px; /* Coloca a seção de contato no fundo do menu */
+    width: 100%; /* Ocupa toda a largura do menu */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    text-align: center;
+    color: #fff;
+}
+
+.contato p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.whatsapp-icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Ícone de menu hambúrguer */
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    color: #222;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hamburger:hover {
+    background-color: #ddd;
+}
+
+.filtros{
+    margin-top: 20%;
+}
+
+/*----------------------POP-UP----------------------*/
 
 .popup .instagram{
     display: block;
     margin-bottom: 10px;
+} 
+
+.popup .contatos-mapa{
+    display: flex;
+}
+
+.popup .contatos-mapa .whatsapp{
+    margin-right: 15px;
 }

@@ -35,6 +35,39 @@ cnpjInput.addEventListener('input', function () {
     this.value = formatarCNPJ(this.value);
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const addHorarioButton = document.getElementById('addHorario');
+    const horariosContainer = document.getElementById('horariosContainer');
+
+    // Função para adicionar novos campos de horário
+    addHorarioButton.addEventListener('click', function() {
+        const novoHorario = document.createElement('div');
+        novoHorario.classList.add('horario');
+        novoHorario.innerHTML = `
+            <select class="dia-da-semana">
+                <option value="segunda">Segunda</option>
+                <option value="terca">Terça</option>
+                <option value="quarta">Quarta</option>
+                <option value="quinta">Quinta</option>
+                <option value="sexta">Sexta</option>
+                <option value="sabado">Sábado</option>
+                <option value="domingo">Domingo</option>
+            </select>
+            <input type="time" class="horario-abertura" required>
+            <input type="time" class="horario-fechamento" required>
+            <button type="button" class="remove-horario">Remover</button>
+        `;
+        horariosContainer.appendChild(novoHorario);
+
+        // Adicionar evento para remover o horário
+        novoHorario.querySelector('.remove-horario').addEventListener('click', function() {
+            horariosContainer.removeChild(novoHorario);
+        });
+    });
+});
+
+
+
 // Evento de envio do formulário
 const form = document.getElementById('cnpjForm');
 form.addEventListener('submit', async function (event) {
