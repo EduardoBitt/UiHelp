@@ -21,8 +21,8 @@ marker.bindPopup(`
         <p><b>Endereço:</b> R. João Pereira dos Santos, 99 - Pte. do Imaruim, Palhoça - SC, 88130-475</p>
         <p><b>Horário de Funcionamento:</b> 08:00–22:00</p>
         <p><b>Visite nosso site:</b> <a href="http://fmpsc.edu.br/" target="_blank">Clique aqui</a></p>
-        <a class="instagram" href="https://www.instagram.com/faculdademunicipaldepalhoca/" target="_blank"><img src="img/instagram.png" style="width:30px;height:auto;"></a>
-        <img src="img/image.png" alt="Imagem do local" style="width:150px;height:auto;">
+        <a class="instagram" href="https://www.instagram.com/faculdademunicipaldepalhoca/" target="_blank"><img src="/img/instagram.png" style="width:30px;height:auto;"></a>
+        <img src="/img/image.png" alt="Imagem do local" style="width:150px;height:auto;">
     </div>
 `);
 
@@ -32,10 +32,10 @@ marker2.bindPopup(`
         <p><b>Endereço:</b> R. João Fedoca - Enseada da Pinheira, Palhoça - SC, 88139-367</p>
         <p><b>Horário de Funcionamento:</b><br> Segunda à sexta<br> 08:00-12:00<br>13:30-18:00</p>
         <div class="contatos-mapa">
-        <a class="whatsapp" href="https://wa.me/5548999346710" target="_blank"><img src="img/whatsapp.png" style="width:30px;height:auto;"></a>
-        <a class="instagram" href="https://www.instagram.com/associacao.procrep/" target="_blank"><img src="img/instagram.png" style="width:30px;height:auto;"></a>
+        <a class="whatsapp" href="https://wa.me/5548999346710" target="_blank"><img src="/img/whatsapp.png" style="width:30px;height:auto;"></a>
+        <a class="instagram" href="https://www.instagram.com/associacao.procrep/" target="_blank"><img src="/img/instagram.png" style="width:30px;height:auto;"></a>
         </div>
-        <img src="img/procrep.jpg" alt="Imagem do local" style="width:150px;height:auto;">
+        <img src="/img/procrep.jpg" alt="Imagem do local" style="width:150px;height:auto;">
     </div>
 `);
 
