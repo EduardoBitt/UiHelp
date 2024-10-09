@@ -258,6 +258,27 @@ html, body {
     background-color: #d1d1d1;
 }
 
+/* Botão de inscrição */
+.inscricao {
+    margin-top: 20px;
+}
+
+.inscrever-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.inscrever-btn:hover {
+    background-color: #0056b3;
+}
+
 /* Seção de contato */
 .contato {
     margin-top: auto;
