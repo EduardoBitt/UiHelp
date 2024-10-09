@@ -253,7 +253,7 @@ html, body {
 .filter-option input[type="radio"] {
     margin-right: 10px;
 }
-
+ 
 .filter-option:hover {
     background-color: #d1d1d1;
 }
