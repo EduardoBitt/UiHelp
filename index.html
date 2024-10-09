@@ -18,36 +18,47 @@
     <div id="map"></div>
 
     <!-- Ícone de menu hamburger -->
-    <div class="hamburger" id="hamburger">&#9776;</div>
+    <div class="hamburger" id="hamburger"><img src="img/logo.png" alt="logo"></div>
 
     <!-- Menu lateral -->
     <div id="menu" class="menu">
-        <a href="#" class="closebtn" id="closebtn">&times;</a>
+        <h2 class="menu-title">UiHelp</h2>
 
-
+        <!-- Filtros do menu -->
         <div class="filtros">
-            <p class="menu-title">Filtros</p>
-
-            <ul class="filter-list">
-                <li><label><input type="checkbox" name="roupas"> Roupas</label></li>
-                <li><label><input type="checkbox" name="moveis"> Móveis</label></li>
-                <li><label><input type="checkbox" name="brinquedos"> Brinquedos</label></li>
-                <li><label><input type="checkbox" name="alimentos"> Alimentos</label></li>
-                <li><label><input type="checkbox" name="residuos"> Resíduos</label></li>
-            </ul>
+            <label class="filter-option">
+                <input type="radio" name="filter" value="todos" checked>
+                Todos
+            </label>
+            <label class="filter-option">
+                <input type="radio" name="filter" value="roupas">
+                Roupas
+            </label>
+            <label class="filter-option">
+                <input type="radio" name="filter" value="moveis">
+                Móveis
+            </label>
+            <label class="filter-option">
+                <input type="radio" name="filter" value="brinquedos">
+                Brinquedos
+            </label>
+            <label class="filter-option">
+                <input type="radio" name="filter" value="alimentos">
+                Alimentos
+            </label>
         </div>
-        
-
-        <!-- Botão de inscrição -->
-        <a href="cadastro.html" target="_blank"><button class="sub-btn">Inscreva sua Instituição</button></a>
-        <a target="_blank"><button class="sub-btn">Seja parceiro</button></a>
 
         <!-- Seção de contato -->
         <div class="contato">
-            <p>Contato</p>
-            <a href="https://wa.me/5548984211514" target="_blank">
-                <img src="img/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
-            </a>
+            <p>Nos Contate!</p>
+            <div class="contact-icons">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="img/instagram.png" alt="Instagram" class="icon">
+                </a>
+                <a href="https://wa.me/5548984211514" target="_blank">
+                    <img src="img/whatsapp.png" alt="WhatsApp" class="icon">
+                </a>
+            </div>
         </div>
     </div>
 

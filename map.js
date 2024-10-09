@@ -45,15 +45,16 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 
-//animação do menu
+// animação do menu
 const hamburger = document.getElementById('hamburger');
-const closebtn = document.getElementById('closebtn');
 const menu = document.getElementById('menu');
 
 hamburger.addEventListener('click', () => {
-    menu.classList.add('open');
-});
-
-closebtn.addEventListener('click', () => {
-    menu.classList.remove('open');
+    if (menu.classList.contains('closed')) {
+        menu.classList.remove('closed');
+        menu.classList.add('open');
+    } else {
+        menu.classList.remove('open');
+        menu.classList.add('closed');
+    }
 });

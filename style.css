@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 .bg{
-    background-image: url("/img/bg-cadastro.png");
+    background-image: url("bg-cadastro.png");
 
     filter: blur(5px);
     -webkit-filter: blur(5px);
@@ -174,118 +174,22 @@ html, body {
     width: 100vw;  /* 100% da largura da viewport */
 }
 
+/* Estilos do menu lateral */
 .menu {
     height: 100%;
-    width: 0;
+    width: 300px;
     position: fixed;
     z-index: 1000;
     top: 0;
     left: 0;
-    background-color: #222;
-    color: white;
-    overflow-x: hidden;
-    transition: width 0.3s ease;
-    padding-top: 60px;
-}
-
-/* Menu quando aberto */
-.menu.open {
-    width: 300px;
-}
-
-/* Título do menu */
-.menu-title {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-/* Links e labels do menu */
-.menu a {
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #f1f1f1;
-    display: block;
-    transition: background 0.3s ease;
-}
-
-.menu label {
-    color: #f1f1f1;
-    font-size: 18px;
-}
-
-.menu .filter-list {
-    list-style-type: none;
-    padding-left: 20px;
-    margin-bottom: 30px;
-}
-
-.filter-list li {
-    margin-bottom: 15px;
-}
-
-.filter-list label {
-    display: flex;
-    align-items: center;
-}
-
-.filter-list input[type="checkbox"] {
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
-}
-
-/* Botão para fechar o menu */
-.menu .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    padding: 10px;
-}
-
-/* Botão de inscrição */
-.sub-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 0 20px 40px;
-    display: block;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-.sub-btn:hover {
-    background-color: #0056b3;
-}
-
-/* Seção de contato */
-.contato {
-    position: absolute;
-    bottom: 20px; /* Coloca a seção de contato no fundo do menu */
-    width: 100%; /* Ocupa toda a largura do menu */
+    background-color: #f9f9f9;
+    color: #333;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    text-align: center;
-    color: #fff;
-}
-
-.contato p {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.whatsapp-icon {
-    width: 40px;
-    height: 40px;
+    align-items: center;
+    transition: all 0.3s ease;
+    padding-top: 20px;
+    border-radius: 0 50px 50px 0;
 }
 
 /* Ícone de menu hambúrguer */
@@ -296,19 +200,95 @@ html, body {
     top: 20px;
     left: 20px;
     z-index: 1001;
-    color: #222;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.hamburger:hover {
-    background-color: #ddd;
+.hamburger img {
+    height: 80px;
 }
 
-.filtros{
-    margin-top: 20%;
+/* Logo do menu */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.menu-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.menu-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: 30%;
+}
+
+/* Filtros */
+.filtros {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    background-color: #e0e0e0;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-option input[type="radio"] {
+    margin-right: 10px;
+}
+
+.filter-option:hover {
+    background-color: #d1d1d1;
+}
+
+/* Seção de contato */
+.contato {
+    margin-top: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.contato p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Animação do menu */
+.menu.open {
+    left: 0;
+}
+
+.menu.closed {
+    left: -300px;
 }
 
 /*----------------------POP-UP----------------------*/

@@ -77,7 +77,7 @@ form.addEventListener('submit', async function (event) {
     const respostaCNPJ = document.getElementById('resposta')
 
     if (await validarCNPJ(cnpj)) {
-        respostaCNPJ.innerHTML = 'CNPJ Válido ✔'
+        respostaCNPJ.innerHTML = 'CNPJ Válido! ✔'
     } else {
         respostaCNPJ.innerHTML = 'CNPJ não existente! ❌'
     }
