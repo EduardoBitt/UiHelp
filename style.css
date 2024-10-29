@@ -78,79 +78,6 @@ button[type="submit"]:hover {
 }
 
 
-/* Estilo para a seção de horários */
-
-.horario-container {
-    display: flex;
-    flex-direction: column; /* Empilha os campos de horário */
-    margin-bottom: 20px; /* Espaçamento inferior */
-    padding: 20px;
-    background-color: #f9f9f9; /* Fundo leve */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-.horario {
-    display: flex;
-    align-items: center; /* Alinha os itens verticalmente */
-    margin-bottom: 15px; /* Espaçamento entre horários */
-}
-
-.horario select,
-.horario input[type="time"] {
-    flex: 1; /* Faz os campos ocuparem o espaço disponível */
-    padding: 10px; /* Espaçamento interno */
-    margin-right: 10px; /* Espaço entre os campos */
-    border: 1px solid #ccc; /* Borda padrão */
-    border-radius: 4px; /* Bordas arredondadas */
-    transition: border-color 0.3s; /* Transição suave */
-}
-
-.horario select:focus,
-.horario input[type="time"]:focus {
-    border-color: #007bff; /* Cor ao focar */
-    outline: none; /* Remove a borda padrão do foco */
-}
-
-.button-container {
-    display: flex;
-    justify-content: space-between; /* Espaça os botões de adicionar e remover */
-}
-
-button#addHorario {
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button#addHorario:hover {
-    background-color: #0056b3;
-}
-
-button.remove-horario {
-    background-color: #ff4444;
-    color: #ffffff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button.remove-horario:hover {
-    background-color: #c0392b; /* Cor ao passar o mouse */
-}
-
-#horarios{
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-
 
 
 
@@ -203,7 +130,7 @@ html, body {
 }
 
 .hamburger img {
-    height: 80px;
+    height: 120px;
 }
 
 /* Logo do menu */
@@ -226,7 +153,7 @@ html, body {
     font-weight: bold;
     color: #333;
     margin-bottom: 20px;
-    margin-top: 30%;
+    margin-top: 50%;
 }
 
 /* Filtros */
