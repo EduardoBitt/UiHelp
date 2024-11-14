@@ -126,7 +126,7 @@ html, body {
 }
 
 .hamburger img {
-    height: 80px;
+    height: 120px;
 }
 
 /* Logo do menu */
@@ -149,7 +149,7 @@ html, body {
     font-weight: bold;
     color: #333;
     margin-bottom: 20px;
-    margin-top: 30%;
+    margin-top: 50%;
 }
 
 /* Filtros */

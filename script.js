@@ -13,6 +13,7 @@ function formatarCNPJ(cnpj) {
 
 const cnpjInput = document.getElementById('cnpjInput');
 
+<<<<<<< HEAD
 if (cnpjInput) {
     cnpjInput.addEventListener('input', function () {
         this.value = formatarCNPJ(this.value);
@@ -42,3 +43,9 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+=======
+cnpjInput.addEventListener('input', function () {
+    this.value = formatarCNPJ(this.value);
+});
+
+>>>>>>> b45826f264dec92e67ec4152eb850dc7c321f96b

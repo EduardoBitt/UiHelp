@@ -22,7 +22,7 @@
 
     <!-- Menu lateral -->
     <div id="menu" class="menu">
-        <h2 class="menu-title">UiHelp</h2>
+        <h2 class="menu-title">Filtros</h2>
 
         <!-- Filtros do menu -->
         <div class="filtros">
