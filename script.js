@@ -1,21 +1,3 @@
-// Função para validar CNPJ usando a API ReceitaWS
-async function validarCNPJ(cnpj) {
-    try {
-        const response = await fetch(`https://www.receitaws.com.br/v1/cnpj/${cnpj}`);
-
-        if (response.ok) {
-            const data = await response.json();
-            return data.status === 'OK'; // Verifica se o CNPJ é válido
-        } else {
-            console.error('Erro na consulta da API:', response.status);
-            return false;
-        }
-    } catch (error) {
-        console.error('Erro na requisição:', error);
-        return false;
-    }
-}
-
 function formatarCNPJ(cnpj) {
     // Remove tudo que não for número
     cnpj = cnpj.replace(/\D/g, '');
@@ -31,55 +13,32 @@ function formatarCNPJ(cnpj) {
 
 const cnpjInput = document.getElementById('cnpjInput');
 
-cnpjInput.addEventListener('input', function () {
-    this.value = formatarCNPJ(this.value);
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const addHorarioButton = document.getElementById('addHorario');
-    const horariosContainer = document.getElementById('horariosContainer');
-
-    // Função para adicionar novos campos de horário
-    addHorarioButton.addEventListener('click', function() {
-        const novoHorario = document.createElement('div');
-        novoHorario.classList.add('horario');
-        novoHorario.innerHTML = `
-            <select class="dia-da-semana">
-                <option value="segunda">Segunda</option>
-                <option value="terca">Terça</option>
-                <option value="quarta">Quarta</option>
-                <option value="quinta">Quinta</option>
-                <option value="sexta">Sexta</option>
-                <option value="sabado">Sábado</option>
-                <option value="domingo">Domingo</option>
-            </select>
-            <input type="time" class="horario-abertura" required>
-            <input type="time" class="horario-fechamento" required>
-            <button type="button" class="remove-horario">Remover</button>
-        `;
-        horariosContainer.appendChild(novoHorario);
-
-        // Adicionar evento para remover o horário
-        novoHorario.querySelector('.remove-horario').addEventListener('click', function() {
-            horariosContainer.removeChild(novoHorario);
-        });
+if (cnpjInput) {
+    cnpjInput.addEventListener('input', function () {
+        this.value = formatarCNPJ(this.value);
     });
-});
+}
 
+// Função para abrir o modal e preencher o ID da instituição
+function abrirModal(id) {
+    // Exibir o modal
+    const modal = document.getElementById("modalForm");
+    modal.style.display = "block";
 
+    // Preencher o campo oculto com o ID da instituição
+    document.getElementById("instituicaoId").value = id;
+}
 
-// Evento de envio do formulário
-const form = document.getElementById('cnpjForm');
-form.addEventListener('submit', async function (event) {
-    event.preventDefault();
-    const cnpjInput = document.getElementById('cnpjInput');
-    const cnpj = cnpjInput.value.replace(/\D/g, ''); // Remove caracteres não numéricos
-    const respostaCNPJ = document.getElementById('resposta')
+// Função para fechar o modal
+document.querySelector(".modal-close").onclick = function() {
+    const modal = document.getElementById("modalForm");
+    modal.style.display = "none";
+}
 
-    if (await validarCNPJ(cnpj)) {
-        respostaCNPJ.innerHTML = 'CNPJ Válido! ✔'
-    } else {
-        respostaCNPJ.innerHTML = 'CNPJ não existente! ❌'
+// Fechar o modal se o usuário clicar fora do conteúdo do modal
+window.onclick = function(event) {
+    const modal = document.getElementById("modalForm");
+    if (event.target === modal) {
+        modal.style.display = "none";
     }
-});
-
+}

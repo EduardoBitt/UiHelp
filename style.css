@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 .bg{
-    background-image: url("bg-cadastro.png");
+    background-image: url("img/bg-cadastro.png");
 
     filter: blur(5px);
     -webkit-filter: blur(5px);
@@ -66,88 +66,11 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-#resposta {
-    font-size: 15px;
-}
-
 #categoria{
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 10px;
-}
-
-
-/* Estilo para a seção de horários */
-
-.horario-container {
-    display: flex;
-    flex-direction: column; /* Empilha os campos de horário */
-    margin-bottom: 20px; /* Espaçamento inferior */
-    padding: 20px;
-    background-color: #f9f9f9; /* Fundo leve */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-.horario {
-    display: flex;
-    align-items: center; /* Alinha os itens verticalmente */
-    margin-bottom: 15px; /* Espaçamento entre horários */
-}
-
-.horario select,
-.horario input[type="time"] {
-    flex: 1; /* Faz os campos ocuparem o espaço disponível */
-    padding: 10px; /* Espaçamento interno */
-    margin-right: 10px; /* Espaço entre os campos */
-    border: 1px solid #ccc; /* Borda padrão */
-    border-radius: 4px; /* Bordas arredondadas */
-    transition: border-color 0.3s; /* Transição suave */
-}
-
-.horario select:focus,
-.horario input[type="time"]:focus {
-    border-color: #007bff; /* Cor ao focar */
-    outline: none; /* Remove a borda padrão do foco */
-}
-
-.button-container {
-    display: flex;
-    justify-content: space-between; /* Espaça os botões de adicionar e remover */
-}
-
-button#addHorario {
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button#addHorario:hover {
-    background-color: #0056b3;
-}
-
-button.remove-horario {
-    background-color: #ff4444;
-    color: #ffffff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button.remove-horario:hover {
-    background-color: #c0392b; /* Cor ao passar o mouse */
-}
-
-#horarios{
-    padding: 10px;
-    margin-bottom: 20px;
 }
 
 
@@ -326,3 +249,235 @@ html, body {
 .popup .contatos-mapa .whatsapp{
     margin-right: 15px;
 }
+
+
+
+/*--------------- ADMIN -----------------*/
+
+/* Estilos gerais do body */
+.body-admin {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+/* Título da página */
+.titulo-admin {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    color: #333;
+}
+
+/* Estilo dos botões de navegação */
+.selecao-tabelas {
+    margin-bottom: 20px;
+}
+
+.selecao-tabelas button {
+    background-color: #008304;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.selecao-tabelas button:hover {
+    background-color: #005e05;
+}
+
+.selecao-tabelas button:focus {
+    outline: none;
+}
+
+/* Tabela */
+.tabela h2{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: bold;
+}
+
+td {
+    background-color: #fff;
+}
+
+td img {
+    max-width: 80px;
+    border-radius: 5px;
+}
+
+/* Estilos de linhas alternadas na tabela */
+tr:nth-child(even) td {
+    background-color: #f4f6f9;
+}
+
+/* Botões de Ações */
+button.aprovar-instituicao,
+button.reprovar-instituicao {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+button.aprovar-instituicao {
+    background-color: #008b4a;
+}
+
+button.reprovar-instituicao {
+    background-color: #dc3545;
+}
+
+button.aprovar-instituicao:hover {
+    background-color: #006b36;
+}
+
+button.reprovar-instituicao:hover {
+    background-color: #c82333;
+}
+
+/* Estilos para o Modal */
+
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal h2{
+    margin-bottom: 20px;
+}
+
+.modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* página de login */
+
+/* Estilos aplicados apenas à página de login */
+.login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+}
+
+.login-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #2e90ff;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #0042f8;
+}
+
+.login-container .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* botao de logout da página de gestao */
+
+.body-admin form {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.body-admin form .logout-button {
+    background-color: rgb(255, 66, 66);
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px; /* Ajuste a distância do fundo */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    margin-bottom: 10px;
+}
+
+.body-admin form .logout-button:hover {
+    background-color: rgb(219, 0, 0);
+}
+
+
+

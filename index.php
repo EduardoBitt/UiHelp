@@ -50,17 +50,17 @@
 
         <!-- Botão de inscrição -->
         <div class="inscricao">
-            <a href="cadastro.html" target="_blank" class="inscrever-btn">Inscreva sua Instituição</a>
+            <a href="cadastro.php" target="_blank" class="inscrever-btn">Inscreva sua Instituição</a>
         </div>
 
         <!-- Seção de contato -->
         <div class="contato">
             <p>Nos Contate!</p>
             <div class="contact-icons">
-                <a href="https://www.instagram.com" target="_blank">
+                <a href="https://www.instagram.com/ui.help/" target="_blank">
                     <img src="img/instagram.png" alt="Instagram" class="icon">
                 </a>
-                <a href="https://wa.me/5548984211514" target="_blank">
+                <a href="" target="_blank">
                     <img src="img/whatsapp.png" alt="WhatsApp" class="icon">
                 </a>
             </div>
