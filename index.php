@@ -8,43 +8,51 @@
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
      crossorigin=""/>
      
-     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <div id="map"></div>
 
+    <script src="map.js"></script>
+
+
     <!-- Ícone de menu hamburger -->
-    <div class="hamburger" id="hamburger"><img src="img/logo.png" alt="logo"></div>
+    <div class="hamburger" id="hamburger">
+        <img src="img/logo.png" alt="logo">
+    </div>
 
     <!-- Menu lateral -->
-    <div id="menu" class="menu">
+    <div id="menu" class="menu closed">
         <h2 class="menu-title">Filtros</h2>
 
         <!-- Filtros do menu -->
         <div class="filtros">
             <label class="filter-option">
                 <input type="radio" name="filter" value="todos" checked>
-                Todos
+                <label>Todos</label>
             </label>
             <label class="filter-option">
                 <input type="radio" name="filter" value="roupas">
-                Roupas
+                <label>Roupas</label>
             </label>
             <label class="filter-option">
                 <input type="radio" name="filter" value="moveis">
-                Móveis
+                <label>Móveis</label>
             </label>
             <label class="filter-option">
                 <input type="radio" name="filter" value="brinquedos">
-                Brinquedos
+                <label>Brinquedos</label>
             </label>
             <label class="filter-option">
                 <input type="radio" name="filter" value="alimentos">
-                Alimentos
+                <label>Alimentos</label>
+            </label>
+            <label class="filter-residuo">
+                <input type="radio" name="filter" value="residuos">
+                <label>Resíduos</label>
             </label>
         </div>
 
@@ -67,6 +75,21 @@
         </div>
     </div>
 
-    <script src="map.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menu = document.getElementById("menu");
+            const hamburger = document.getElementById("hamburger");
+
+            // Alterna entre aberto e fechado ao clicar no ícone
+            hamburger.addEventListener("click", function() {
+                menu.classList.toggle("open");
+                menu.classList.toggle("closed");
+            });
+        });
+    </script>
+
+
+
 </body>
 </html>

@@ -94,7 +94,7 @@ html, body {
 
 #map {
     height: 100vh; /* 100% da altura da viewport */
-    width: 100vw;  /* 100% da largura da viewport */
+    width: 100%;  /* 100% da largura da viewport */
 }
 
 /* Estilos do menu lateral */
@@ -113,6 +113,16 @@ html, body {
     transition: all 0.3s ease;
     padding-top: 20px;
     border-radius: 0 50px 50px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+.menu.open { /* *//* */
+    left: 0;
+}
+
+.menu.closed { /* *//* */
+    left: -300px;
 }
 
 /* Ícone de menu hambúrguer */
@@ -127,6 +137,12 @@ html, body {
 
 .hamburger img {
     height: 120px;
+    margin-left: 85px;
+    margin-right: 85px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 20%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Logo do menu */
@@ -160,6 +176,7 @@ html, body {
     width: 80%;
 }
 
+
 .filter-option {
     display: flex;
     align-items: center;
@@ -173,13 +190,40 @@ html, body {
     transition: background-color 0.3s ease;
 }
 
+.filter-residuo {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    background-color: #e0e0e0;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-residuo input[type="radio"] {
+    margin-right: 10px;
+}
+
 .filter-option input[type="radio"] {
     margin-right: 10px;
 }
+
+.filter-residuo:hover {
+    background-color: #3f8f29;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
  
 .filter-option:hover {
-    background-color: #d1d1d1;
+    background-color: #ba1e1e;
+    color: #ffffff;
+    transition: all 0.3s ease;
 }
+
+
 
 /* Botão de inscrição */
 .inscricao {
@@ -222,8 +266,8 @@ html, body {
 }
 
 .icon {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
 }
 
 /* Animação do menu */
