@@ -1,7 +1,6 @@
 <?php
 header('Content-Type: application/json');
 
-// Incluir o arquivo de conexão com o banco de dados
 include 'conexao.php';
 
 // Consultar dados das instituições com latitude e longitude

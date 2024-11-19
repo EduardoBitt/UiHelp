@@ -26,7 +26,6 @@
 
     <!-- Menu lateral -->
     <div id="menu" class="menu closed">
-        <h2 class="menu-title">Filtros</h2>
 
         <!-- Filtros do menu -->
         <div class="filtros">
@@ -68,7 +67,7 @@
                 <a href="https://www.instagram.com/ui.help/" target="_blank">
                     <img src="img/instagram.png" alt="Instagram" class="icon">
                 </a>
-                <a href="" target="_blank">
+                <a href="https://wa.me/5548991967983" target="_blank">
                     <img src="img/whatsapp.png" alt="WhatsApp" class="icon">
                 </a>
             </div>

@@ -1,8 +1,8 @@
 var map = L.map('map').setView([-27.63770377332425, -48.651619822297285], 10);
 
-// Define o ícone padrão do Leaflet com a cor verde
+
 var greenIcon = L.icon({
-    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png', // Ícone verde original
+    iconUrl: 'img/icone.png', // Link do ícone
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png', // Sombra do ícone
 
     iconSize: [25, 41], // Tamanho do ícone
