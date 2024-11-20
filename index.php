@@ -72,6 +72,13 @@
                 </a>
             </div>
         </div>
+
+        <div class="sobre">
+            <a href="sobrenos.php" target="_blank">
+                <h4>Sobre Nós</h4> 
+            </a>
+        </div>
+
     </div>
 
 

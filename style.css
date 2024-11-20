@@ -8,13 +8,16 @@
     filter: blur(5px);
     -webkit-filter: blur(5px);
 
-  /* Full height */
-    height: 100%;
+    /* Garante que o background cubra o conteúdo completo da página */
+    min-height: 100vh;
 
-  /* Center and scale the image nicely */
+    /* Centraliza e ajusta o fundo */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    /* Fixar o background durante o scroll */
+    background-attachment: fixed;
 }
 
 form {
@@ -53,7 +56,7 @@ form input {
 }
 
 button[type="submit"] {
-    background-color: #007bff;
+    background-color: #3f8f29;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
@@ -63,7 +66,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #ba1e1e;
 }
 
 #categoria{
@@ -225,7 +228,7 @@ html, body {
 
 .inscrever-btn {
     display: inline-block;
-    background-color: #007bff;
+    background-color: #3f8f29;
     color: white;
     padding: 10px 20px;
     border-radius: 10px;
@@ -236,7 +239,7 @@ html, body {
 }
 
 .inscrever-btn:hover {
-    background-color: #0056b3;
+    background-color: #ba1e1e;
 }
 
 /* Seção de contato */
@@ -261,6 +264,19 @@ html, body {
 .icon {
     width: 35px;
     height: 35px;
+}
+
+/* Seção de sobre no menu */
+
+.sobre{
+    color: black;
+    padding-bottom: 20px;
+    
+}
+
+.sobre a{
+    color: inherit;        
+    text-decoration: none; 
 }
 
 /* Animação do menu */
@@ -517,4 +533,82 @@ button.reprovar-instituicao:hover {
 }
 
 
+/*-------------------------- CSS relacionado ao sobre nos  --------------------------*/
+
+.sobre-nos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.sobre-nos {
+    display: flex;
+    padding: 30px;
+    max-width: 1200px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sobre-nos-imagem {
+    flex: 1;
+    padding-right: 50px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.sobre-nos-imagem img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-nos-texto {
+    flex: 2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    text-align: justify;
+}
+
+.sobre-nos-texto h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.equipe-texto {
+    flex: 2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    text-align: justify;
+}
+
+.equipe-texto h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.equipe-logo {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.equipe-logo img {
+    max-width: 110px;
+    max-height: 110px;
+}
 

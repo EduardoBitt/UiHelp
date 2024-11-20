@@ -10,6 +10,9 @@
 
     <div class="bg"></div>
 
+
+
+
     <form id="cnpjForm" action="processa_cadastro.php" method="POST" enctype="multipart/form-data">
         <h1>Cadastre sua Instituição</h1>
         
@@ -28,6 +31,12 @@
         <label for="email">Email</label>
         <input type="email" name="email" id="email" required>
 
+        <label for="whatsapp">Whatsapp</label>
+        <input type="whatsapp" name="whatsapp" id="whatsapp">
+
+        <label for="instagram">Instagram</label>
+        <input type="instagram" name="instagram" id="instagram">
+
         <label for="imagem">Imagem da Instituição</label>
         <input type="file" name="imagem" id="imagem">
         
@@ -42,6 +51,7 @@
 
         <button type="submit">Enviar</button>
     </form>
+
 
     <script src="script.js"></script>
 </body>
