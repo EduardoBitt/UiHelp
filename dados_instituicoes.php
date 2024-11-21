@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 include 'conexao.php';
 
 // Consultar dados das instituições com latitude e longitude
-$sql = "SELECT id, nome, endereco, telefone, email, categoria, imagem, latitude, longitude FROM instituicoes WHERE latitude IS NOT NULL AND longitude IS NOT NULL";
+$sql = "SELECT id, nome, endereco, telefone, email, categoria, imagem, horario_abertura, horario_fechamento, instagram, whatsapp, latitude, longitude FROM instituicoes WHERE latitude IS NOT NULL AND longitude IS NOT NULL";
 $result = $conn->query($sql);
 
 $instituicoes = array();

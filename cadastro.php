@@ -31,6 +31,12 @@
         <label for="email">Email</label>
         <input type="email" name="email" id="email" required>
 
+        <label for="horario_abertura">Horário de Abertura:</label>
+        <input type="time" name="horario_abertura" id="horario_abertura" required>
+
+        <label for="horario_fechamento">Horário de Fechamento:</label>
+        <input type="time" name="horario_fechamento" id="horario_fechamento" required>
+
         <label for="whatsapp">Whatsapp</label>
         <input type="whatsapp" name="whatsapp" id="whatsapp">
 

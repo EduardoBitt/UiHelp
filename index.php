@@ -16,6 +16,14 @@
 <body>
     <div id="map"></div>
 
+    <!-- Overlay para ampliar a imagem -->
+    <div id="image-overlay" class="overlay closed">
+        <div class="overlay-content">
+            <img id="enlarged-image" src="" alt="Imagem ampliada">
+        </div>
+    </div>
+
+
     <script src="map.js"></script>
 
 
@@ -80,6 +88,13 @@
         </div>
 
     </div>
+
+    <div id="image-overlay" class="overlay closed">
+        <div class="overlay-content">
+            <img id="enlarged-image" src="" alt="Imagem ampliada">
+        </div>
+    </div>
+
 
 
     <script>
