@@ -55,7 +55,9 @@
             <option value="residuos">Residuos</option>
         </select>
 
-        <button type="submit">Enviar</button>
+        <button type="submit" id="submit-btn">Enviar</button>
+
+        <p id="status-cadastro"></p>
     </form>
 
 

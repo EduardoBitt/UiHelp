@@ -32,6 +32,10 @@
                     <th>Endereço</th>
                     <th>Telefone</th>
                     <th>Email</th>
+                    <th>Horario Abertura</th>
+                    <th>Horario Fechamento</th>
+                    <th>Instagram</th>
+                    <th>Whatsapp</th>
                     <th>Imagem</th>
                     <th>Categoria</th>
                     <th>Ações</th>
@@ -57,6 +61,10 @@
                         echo "<td>" . $row['endereco'] . "</td>";
                         echo "<td>" . $row['telefone'] . "</td>";
                         echo "<td>" . $row['email'] . "</td>";
+                        echo "<td>" . $row['horario_abertura'] . "</td>";
+                        echo "<td>" . $row['horario_fechamento'] . "</td>";
+                        echo "<td>" . $row['instagram'] . "</td>";
+                        echo "<td>" . $row['whatsapp'] . "</td>";
                         echo "<td><img src='" . $row['imagem'] . "' width='100' alt='Imagem'></td>";
                         echo "<td>" . $row['categoria'] . "</td>";
                         echo "<td>";
@@ -87,7 +95,6 @@
                     <th>Email</th>
                     <th>Categoria</th>
                     <th>Imagem</th>
-                    <th>Localização no Mapa</th>
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -105,8 +112,8 @@
                         echo "<td>" . htmlspecialchars($row['email']) . "</td>";
                         echo "<td>" . htmlspecialchars($row['categoria']) . "</td>";
                         echo "<td><img src='" . htmlspecialchars($row['imagem']) . "' alt='Imagem da Instituição' style='width:100px; height:auto;'></td>";
-                        echo "<td><a href='index.php?lat=" . htmlspecialchars($row['latitude']) . "&lng=" . htmlspecialchars($row['longitude']) . "' target='_blank'>Ver no mapa</a></td>";
-                        echo "<td><a href='excluir/excluir_instituicao_aprovada.php?id=" . htmlspecialchars($row['id']) . "' onclick=\"return confirm('Tem certeza que deseja excluir esta instituição?');\">Excluir</a></td>";
+                        echo "<td><a href='excluir/excluir_instituicao_aprovada.php?id=" . htmlspecialchars($row['id']) . "' onclick=\"return confirm('Tem certeza que deseja excluir esta instituição?');\">";
+                        echo "<button class='excluir-instituicao' type='button'>excluir</button>";
                         echo "</tr>";
                     }
                 } else {

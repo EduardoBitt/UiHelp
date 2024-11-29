@@ -33,9 +33,9 @@
                         <br>
                         <h1>Equipe UiHelp</h1>
                         <p>
-                            A equipe UiHelp é composta pelos alunos/desenvolvedores da 5ª Fase de ADS Eduardo Bitterncourt Ilibio Garcia, Henrique Goulvea Laux e Lucas Firmino dos Santos.
+                            A equipe UiHelp é composta pelos alunos/desenvolvedores da 5ª Fase de ADS Eduardo Bittencourt Ilibio Garcia, Henrique Goulvea Laux e Lucas Firmino dos Santos.
                         </p>
-                        <br>s
+                        <br>
                         <p>
                             Estamos felizes com o andamento do projeto, e muitos confiantes com seu futuro!💚
                         </p>

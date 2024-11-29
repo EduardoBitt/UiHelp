@@ -76,6 +76,19 @@ button[type="submit"]:hover {
     padding: 10px;
 }
 
+.status-cadastro {
+    font-size: 1rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.status-cadastro.success {
+    color: green;
+}
+
+.status-cadastro.error {
+    color: red;
+}
 
 
 
@@ -420,6 +433,25 @@ tr:nth-child(even) td {
 }
 
 /* Botões de Ações */
+
+.excluir-instituicao{
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+button.excluir-instituicao{
+    background-color: #dc3545;
+}
+
+button.excluir-instituicao:hover {
+    background-color: #c82333;
+}
+
 button.aprovar-instituicao,
 button.reprovar-instituicao {
     padding: 8px 12px;
@@ -482,7 +514,8 @@ button.reprovar-instituicao:hover {
 
 /* página de login */
 
-/* Estilos aplicados apenas à página de login */
+
+
 .login-page {
     display: flex;
     align-items: center;
@@ -536,10 +569,13 @@ button.reprovar-instituicao:hover {
 
 /* botao de logout da página de gestao */
 
+/* Botão de logout no canto superior esquerdo */
 .body-admin form {
     margin: 0;
     padding: 0;
-    display: inline;
+    position: fixed; 
+    top: 4rem; 
+    left: 4.5rem;
 }
 
 .body-admin form .logout-button {
@@ -547,17 +583,15 @@ button.reprovar-instituicao:hover {
     border: none;
     color: #ffffff;
     font-size: 16px;
+    padding: 10px 15px;
     cursor: pointer;
-    position: fixed;
-    bottom: 20px; /* Ajuste a distância do fundo */
-    left: 50%;
-    transform: translateX(-50%); /* Centraliza horizontalmente */
-    margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 .body-admin form .logout-button:hover {
     background-color: rgb(219, 0, 0);
 }
+
 
 
 /*-------------------------- CSS relacionado ao sobre nos  --------------------------*/

@@ -42,6 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="login-page">
+    
     <div class="login-container">
         <form method="POST" action="">
             <label>Usuário:</label>
