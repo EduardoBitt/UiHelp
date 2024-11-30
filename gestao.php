@@ -8,7 +8,7 @@
 </head>
 <body class="body-admin">
 
-    <form action="logout.php" method="POST">
+    <form action="logout.php" id="logout" method="POST">
         <button type="submit" class="logout-button">Sair</button>
     </form>
     
@@ -22,7 +22,7 @@
     </div>
 
     <!-- Tabela de Instituições Pendentes -->
-    <div id="pendentes" class="tabela" style="display: block;">
+    <div id="pendentes" class="tabela centralizado">
         <h2>Instituições Pendentes</h2>
         <table border="1">
             <thead>
@@ -84,11 +84,12 @@
     </div>
 
     <!-- Tabela de Instituições Aprovadas -->
-    <div id="aprovadas" class="tabela" style="display: none;">
+    <div id="aprovadas" class="tabela centralizado" style="display: none;">
         <h2>Instituições Aprovadas</h2>
         <table border="1">
             <thead>
                 <tr>
+                    <th>CNPJ</th>
                     <th>Nome</th>
                     <th>Endereço</th>
                     <th>Telefone</th>
@@ -106,6 +107,7 @@
                 if ($result_aprovadas->num_rows > 0) {
                     while ($row = $result_aprovadas->fetch_assoc()) {
                         echo "<tr>";
+                        echo "<td>" . htmlspecialchars($row['cnpj']) . "</td>";
                         echo "<td>" . htmlspecialchars($row['nome']) . "</td>";
                         echo "<td>" . htmlspecialchars($row['endereco']) . "</td>";
                         echo "<td>" . htmlspecialchars($row['telefone']) . "</td>";
@@ -128,7 +130,7 @@
     <div id="modalForm" class="modal">
         <form action="aprovar/aprovar_instituicao.php" method="POST">
             <span class="modal-close">&times;</span>
-            <h2>Adicionar Latitude e Longitude</h2>
+            <h2>Adicione Latitude e Longitude</h2>
             <input type="hidden" name="id" id="instituicaoId">
             <label for="latitude">Latitude:</label>
             <input type="text" name="latitude" id="latitude" required>
@@ -138,14 +140,25 @@
         </form>
     </div>
 
-    <script src="script.js"></script>
-
+    
     <script>
         function mostrarTabela(tabela) {
-            document.getElementById('pendentes').style.display = (tabela === 'pendentes') ? 'block' : 'none';
-            document.getElementById('aprovadas').style.display = (tabela === 'aprovadas') ? 'block' : 'none';
-        }
+        // Esconde ambas as tabelas
+        document.getElementById('pendentes').style.display = 'none';
+        document.getElementById('aprovadas').style.display = 'none';
+
+        // Remove a classe de centralização das tabelas
+        document.getElementById('pendentes').classList.remove('centralizado');
+        document.getElementById('aprovadas').classList.remove('centralizado');
+
+        // Mostra a tabela selecionada e aplica a centralização
+        const tabelaSelecionada = document.getElementById(tabela);
+        tabelaSelecionada.style.display = 'flex';
+        tabelaSelecionada.classList.add('centralizado');
+    }
     </script>
+
+    <script src="script.js"></script>
 
 </body>
 </html>

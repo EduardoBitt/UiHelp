@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $resultado = $stmt_verifica->get_result();
 
     if ($resultado->num_rows > 0) {
-        echo json_encode(["status" => "error", "message" => "Instituição já cadastrada."]);
+        echo json_encode(["status" => "error", "message" => "Instituição já cadastrada"]);
         exit; // Interrompe o restante do processamento
     }
 

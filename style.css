@@ -38,6 +38,7 @@ form h1 {
     text-align: center;
     margin-top: 5px;
     margin-bottom: 30px;
+    font-size: 1.7rem;
 }
 
 label {
@@ -80,6 +81,7 @@ button[type="submit"]:hover {
     font-size: 1rem;
     margin-top: 10px;
     text-align: center;
+    justify-content: center;
 }
 
 .status-cadastro.success {
@@ -383,13 +385,31 @@ html, body {
 
 .selecao-tabelas button:hover {
     background-color: #005e05;
+    transform: scale(1.05);
 }
 
 .selecao-tabelas button:focus {
-    outline: none;
+    background-color: #005e05;
+    transform: scale(1.05);
 }
 
 /* Tabela */
+
+.tabela {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.centralizado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+}
+
 .tabela h2{
     text-align: center;
     margin-top: 20px;
@@ -397,7 +417,7 @@ html, body {
 }
 
 table {
-    width: 100%;
+    width: 50%;
     border-collapse: collapse;
     margin: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -420,6 +440,7 @@ th {
 
 td {
     background-color: #fff;
+    font-size: 0.9rem;
 }
 
 td img {
@@ -430,6 +451,30 @@ td img {
 /* Estilos de linhas alternadas na tabela */
 tr:nth-child(even) td {
     background-color: #f4f6f9;
+}
+
+/* botao de logout da página de gestao */
+
+.body-admin #logout {
+    margin: 0;
+    padding: 0;
+    position: fixed; 
+    top: 4rem; 
+    left: 4.5rem;
+}
+
+.body-admin #logout .logout-button {
+    background-color: rgb(255, 66, 66);
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.body-admin #logout .logout-button:hover {
+    background-color: rgb(219, 0, 0);
 }
 
 /* Botões de Ações */
@@ -567,30 +612,17 @@ button.reprovar-instituicao:hover {
     text-align: center;
 }
 
-/* botao de logout da página de gestao */
-
-/* Botão de logout no canto superior esquerdo */
-.body-admin form {
-    margin: 0;
-    padding: 0;
-    position: fixed; 
-    top: 4rem; 
-    left: 4.5rem;
+.logo-container img{
+    height: 100px;
+    width: auto;
 }
 
-.body-admin form .logout-button {
-    background-color: rgb(255, 66, 66);
-    border: none;
-    color: #ffffff;
-    font-size: 16px;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
+.logo-container{
+    position: absolute;
+    top: 5%;
 }
 
-.body-admin form .logout-button:hover {
-    background-color: rgb(219, 0, 0);
-}
+
 
 
 
