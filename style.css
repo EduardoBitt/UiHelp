@@ -553,7 +553,11 @@ button.reprovar-instituicao:hover {
 
 /* página de login */
 
-
+.login-container{
+    background-color: white;
+    padding: 2%;
+    border-radius: 10px;
+}
 
 .login-page {
     display: flex;
