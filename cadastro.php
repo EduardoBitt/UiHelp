@@ -6,12 +6,7 @@
     <title>Cadastro</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-    <div class="bg"></div>
-
-
-
+<body class="bg">
 
     <form id="cnpjForm" action="processa_cadastro.php" method="POST" enctype="multipart/form-data">
         <h1>Cadastre sua Instituição</h1>
@@ -20,16 +15,16 @@
         <input type="text" name="cnpj" id="cnpjInput" maxlength="18" placeholder="Digite o CNPJ" required>
         
         <label for="nome">Nome da Instituição</label>
-        <input type="text" name="nome" id="nome" required>
+        <input type="text" name="nome" id="nome" placeholder="Nome" required>
         
         <label for="endereco">Endereço</label>
-        <input type="text" name="endereco" id="endereco" required>
+        <input type="text" name="endereco" id="endereco" placeholder="Endereço" required>
         
         <label for="telefone">Telefone</label>
-        <input type="text" name="telefone" id="telefone" required>
+        <input type="text" name="telefone" id="telefone" placeholder="Telefone" required>
 
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" required>
+        <input type="email" name="email" id="email" placeholder="Email"required>
 
         <label for="horario_abertura">Horário de Abertura:</label>
         <input type="time" name="horario_abertura" id="horario_abertura" required>
@@ -38,10 +33,10 @@
         <input type="time" name="horario_fechamento" id="horario_fechamento" required>
 
         <label for="whatsapp">Whatsapp</label>
-        <input type="whatsapp" name="whatsapp" id="whatsapp">
+        <input type="whatsapp" name="whatsapp" placeholder="Whatsapp" id="whatsapp">
 
         <label for="instagram">Instagram</label>
-        <input type="instagram" name="instagram" id="instagram">
+        <input type="instagram" name="instagram" placeholder="Instagram" id="instagram">
 
         <label for="imagem">Imagem da Instituição</label>
         <input type="file" name="imagem" id="imagem">
@@ -57,7 +52,7 @@
 
         <button type="submit" id="submit-btn">Enviar</button>
 
-        <p id="status-cadastro"></p>
+        <p id="status-cadastro" class="slide-in"></p>
     </form>
 
 

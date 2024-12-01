@@ -2,61 +2,54 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-.bg{
+/* Estilo para a página de fundo */
+.bg {
     background-image: url("img/bg-cadastro.png");
-
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-
-    /* Garante que o background cubra o conteúdo completo da página */
     min-height: 100vh;
-
-    /* Centraliza e ajusta o fundo */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    /* Fixar o background durante o scroll */
     background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-form {
+/* Estilo do formulário */
+.bg form {
+    width: 100%;
     max-width: 700px;
-    margin: 0 auto;
     padding: 30px;
     background-color: #ffffff;
-    border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-family: Roboto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box;
+    margin: auto;
 }
 
-form h1 {
+.bg form h1 {
     text-align: center;
     margin-top: 5px;
     margin-bottom: 30px;
     font-size: 1.7rem;
 }
 
-label {
+.bg label {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
 }
 
-form input {
-    width: 100%; /* Ajusta o tamanho do input para ocupar todo o espaço disponível */
+.bg form input {
+    width: 100%;
     padding: 10px;
-    margin-bottom: 20px; /* Espaço entre os campos */
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Garante que o padding não altere o tamanho do input */
+    box-sizing: border-box;
 }
 
-button[type="submit"] {
+.bg button[type="submit"] {
     background-color: #3f8f29;
     color: #ffffff;
     border: none;
@@ -64,10 +57,11 @@ button[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%;
 }
 
-button[type="submit"]:hover {
-    background-color: #ba1e1e;
+.bg button[type="submit"]:hover {
+    background-color: #2d661d;
 }
 
 #categoria{
@@ -77,18 +71,18 @@ button[type="submit"]:hover {
     padding: 10px;
 }
 
-.status-cadastro {
+#status-cadastro {
     font-size: 1rem;
-    margin-top: 10px;
+    margin-top: 2rem;
     text-align: center;
     justify-content: center;
 }
 
-.status-cadastro.success {
+#status-cadastro.success {
     color: green;
 }
 
-.status-cadastro.error {
+#status-cadastro.error {
     color: red;
 }
 
