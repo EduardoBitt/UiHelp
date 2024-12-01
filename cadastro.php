@@ -52,7 +52,7 @@
 
         <button type="submit" id="submit-btn">Enviar</button>
 
-        <p id="status-cadastro" class="slide-in"></p>
+        <p id="status-cadastro"></p>
     </form>
 
 
