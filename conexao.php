@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "uihelp";        
-$password = "@uihelp2024admin";            
+$password = "@UiHelp2024admin";            
 $dbname = "uihelp";
 
 // Cria a conexão
