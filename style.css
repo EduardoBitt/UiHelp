@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* Estilo para a página de fundo */
-.bg {
+.cadastro {
     background-image: url("img/bg-cadastro.png");
     min-height: 100vh;
     background-position: center;
@@ -16,7 +16,7 @@
 }
 
 /* Estilo do formulário */
-.bg form {
+.cadastro form {
     width: 100%;
     max-width: 700px;
     padding: 30px;
@@ -27,20 +27,20 @@
     margin: auto;
 }
 
-.bg form h1 {
+.cadastro form h1 {
     text-align: center;
     margin-top: 5px;
     margin-bottom: 30px;
     font-size: 1.7rem;
 }
 
-.bg label {
+.cadastro label {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
 }
 
-.bg form input {
+.cadastro form input {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -49,7 +49,7 @@
     box-sizing: border-box;
 }
 
-.bg button[type="submit"] {
+.cadastro button[type="submit"] {
     background-color: #3f8f29;
     color: #ffffff;
     border: none;
@@ -60,7 +60,7 @@
     width: 100%;
 }
 
-.bg button[type="submit"]:hover {
+.cadastro button[type="submit"]:hover {
     background-color: #2d661d;
 }
 
@@ -245,6 +245,7 @@ html, body {
     text-decoration: none;
     font-size: 16px;
     transition: background-color 0.3s ease;
+    width: 100%;
 }
 
 .inscrever-btn:hover {
@@ -382,11 +383,6 @@ html, body {
     transform: scale(1.05);
 }
 
-.selecao-tabelas button:focus {
-    background-color: #005e05;
-    transform: scale(1.05);
-}
-
 /* Tabela */
 
 .tabela {
@@ -411,10 +407,25 @@ html, body {
 }
 
 table {
-    width: 50%;
+    width: 100%; /* Ajusta a tabela para ocupar 100% da largura do container */
     border-collapse: collapse;
     margin: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+    display: block; /* Garante que a tabela possa rolar em telas menores */
+}
+
+@media (max-width: 768px) {
+    table {
+        display: block; /* Permite o scroll horizontal */
+        overflow-x: auto;
+        white-space: nowrap; /* Evita quebra de linhas dentro das células */
+    }
+
+    th, td {
+        text-align: left; /* Melhora a leitura em tabelas com scroll horizontal */
+        padding: 8px;
+    }
 }
 
 table, th, td {
@@ -433,13 +444,24 @@ th {
 }
 
 td {
-    background-color: #fff;
-    font-size: 0.9rem;
+    word-wrap: break-word; /* Quebra automaticamente palavras longas */
+    max-width: 200px; /* Limita a largura das células em telas maiores */
 }
 
 td img {
-    max-width: 80px;
-    border-radius: 5px;
+    max-width: 50px; /* Reduz o tamanho máximo das imagens */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+/* Centralizar botões em telas menores */
+@media (max-width: 600px) {
+    button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
 }
 
 /* Estilos de linhas alternadas na tabela */
@@ -597,6 +619,42 @@ button.reprovar-instituicao:hover {
     color: #000;
     text-decoration: none;
 }
+
+/* Modal para imagem das tabelas */
+.modal-imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.modal-imagem img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.img-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.img-close:hover {
+    color: #f44336;
+}
+
 
 
 

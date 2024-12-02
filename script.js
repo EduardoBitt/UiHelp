@@ -87,5 +87,39 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Função para inicializar o modal de imagens
+function setupImageModal() {
+    const imageModal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    const closeImageModal = document.getElementById("closeImageModal");
+    const tableImages = document.querySelectorAll("table img");
+
+    // Abre o modal ao clicar em uma imagem
+    tableImages.forEach((img) => {
+        img.addEventListener("click", () => {
+            modalImage.src = img.src;
+            imageModal.style.display = "flex";
+        });
+    });
+
+    // Fecha o modal ao clicar no botão de fechar
+    closeImageModal.addEventListener("click", () => {
+        imageModal.style.display = "none";
+    });
+
+    // Fecha o modal ao clicar fora da imagem
+    imageModal.addEventListener("click", (event) => {
+        if (event.target === imageModal) {
+            imageModal.style.display = "none";
+        }
+    });
+}
+
+// Inicializa o modal de imagem quando a página carregar
+document.addEventListener("DOMContentLoaded", () => {
+    setupImageModal();
+});
+
+
 
 

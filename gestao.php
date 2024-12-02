@@ -140,6 +140,13 @@
         </form>
     </div>
 
+    <!-- Modal para Ampliar Imagem -->
+    <div id="imageModal" class="modal-imagem" style="display: none;">
+        <span id="closeImageModal" class="img-close">&times;</span>
+        <img id="modalImage" src="" alt="Imagem Ampliada" style="max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);">
+    </div>
+
+
     
     <script>
         function mostrarTabela(tabela) {

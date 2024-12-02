@@ -6,10 +6,10 @@
     <title>Cadastro</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg">
+<body class="cadastro">
 
     <form id="cnpjForm" action="processa_cadastro.php" method="POST" enctype="multipart/form-data">
-        <h1>Cadastre sua Instituição</h1>
+        <h1>Cadastre Sua Instituição</h1>
         
         <label for="cnpjInput">CNPJ</label>
         <input type="text" name="cnpj" id="cnpjInput" maxlength="18" placeholder="Digite o CNPJ" required>
