@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "uihelp";        
+$username = "u549325694_uihelp";        
 $password = "@UiHelp2024admin";            
-$dbname = "uihelp";
+$dbname = "u549325694_uihelp";
 
 // Cria a conexão
 $conn = new mysqli($servername, $username, $password, $dbname);

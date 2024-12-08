@@ -6,10 +6,7 @@
     <title>Sobre Nós</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-    <div class="bg"></div>
-
+<body class="sobre-nos-bg">
 
         
         <div class="sobre-nos">
@@ -37,7 +34,7 @@
                         </p>
                         <br>
                         <p>
-                            Estamos felizes com o andamento do projeto, e muitos confiantes com seu futuro!💚
+                            Estamos felizes com o andamento do projeto e muitos confiantes com seu futuro!💚
                         </p>
 
                         <div class="equipe-logo">

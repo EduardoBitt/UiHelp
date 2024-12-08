@@ -811,3 +811,15 @@ button.reprovar-instituicao:hover {
     max-height: 110px;
 }
 
+.sobre-nos-bg{
+    background-image: url(img/bg-cadastro.png);
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
